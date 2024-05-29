@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Default Prediction</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Loan Default Prediction</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="Age" placeholder="Enter Age"><br>
+        <input type="text" name="Income" placeholder="Enter Income"><br>
+        <input type="text" name="LoanAmount" placeholder="Enter Loan Amount"><br>
+        <input type="text" name="CreditScore" placeholder="Enter Credit Score"><br>
+        <input type="text" name="MonthsEmployed" placeholder="Enter Months Employed"><br>
+        <input type="text" name="NumCreditLines" placeholder="Enter Number of Credit Lines"><br>
+        <input type="text" name="InterestRate" placeholder="Enter Interest Rate"><br>
+        <input type="text" name="LoanTerm" placeholder="Enter Loan Term"><br>
+        <input type="text" name="DTIRatio" placeholder="Enter DTI Ratio"><br>
+        <select name="Education">
+            <option value="0">High School</option>
+            <option value="1">Bachelor's</option>
+            <option value="2">Master's</option>
+            <option value="3">PHD</option>
+        </select><br>
+        <select name="EmploymentType">
+            <option value="0">Full-Time</option>
+            <option value="1">Part-Time</option>
+            <option value="2">Self-Employed</option>
+            <option value="3">Unemployed</option>
+        </select><br>
+        <select name="MaritalStatus">
+            <option value="0">Divorced</option>
+            <option value="1">Married</option>
+            <option value="2">Single</option>
+        </select><br>
+        <select name="HasMortgage">
+            <option value="0">No Mortgage</option>
+            <option value="1">Has Mortgage</option>
+        </select><br>
+        <select name="HasDependents">
+            <option value="0">No Dependents</option>
+            <option value="1">Has Dependents</option>
+        </select><br>
+        <select name="LoanPurpose">
+            <option value="0">Auto</option>
+            <option value="1">Business</option>
+            <option value="2">Education</option>
+            <option value="3">Home</option>
+            <option value="4">Other</option>
+        </select><br>
+        <select name="HasCoSigner">
+            <option value="0">No Co-Signer</option>
+            <option value="1">Has Co-Signer</option>
+        </select><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
