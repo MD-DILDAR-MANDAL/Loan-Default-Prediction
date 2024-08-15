@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loan Default Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+        font-family: "Roboto Serif", serif;
+        font-optical-sizing: auto;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        }
 
 h1 {
     text-align: center;
@@ -19,7 +24,7 @@ h1 {
 
 form {
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -55,10 +60,13 @@ button:active {
     background-color: #3e8e41;
 }
 
-    </style>
+</style>
 </head>
 <body>
     <h1>Loan Default Prediction</h1>
+    <div style="text-align: center;">
+        <img src="loanImg.png" height="200px" width="250px" style=" border-radius: 50%;">
+    </div>
     <form action="{{url_for('predict')}}" method="post">
         <input type="text" name="Age" placeholder="Enter Age"><br>
         <input type="text" name="Income" placeholder="Enter Income"><br>
@@ -107,5 +115,10 @@ button:active {
         </select><br>
         <button type="submit">Predict</button>
     </form>
+    <hr>
+    <div class="footer" style="text-align: center;font-size: small;">
+        <p class="footer-text"> Project Created by : <a href="https://github.com/MD-DILDAR-MANDAL">Md Dildaar Mandal</a> , <a href="https://github.com/GulnaazParveen">Gulnaaz Parveen</a> , Swmdwn Choudhury.</p>
+        <p class="footer-text">&copy; 2024</p>
+    </div>
 </body>
 </html>
