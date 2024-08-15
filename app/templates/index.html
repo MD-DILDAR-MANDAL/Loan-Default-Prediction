@@ -64,9 +64,7 @@ button:active {
 </head>
 <body>
     <h1>Loan Default Prediction</h1>
-    <div style="text-align: center;">
-        <img src="loan.jpg" height="200px" width="250px" style=" border-radius: 50%;">
-    </div>
+
     <form action="{{url_for('predict')}}" method="post">
         <input type="text" name="Age" placeholder="Enter Age"><br>
         <input type="text" name="Income" placeholder="Enter Income"><br>
